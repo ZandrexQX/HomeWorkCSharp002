@@ -58,14 +58,21 @@ Console.WriteLine("Task Add");
 Console.WriteLine("------");
 
 Console.Write("Enter number:");
-int num3 = Convert.ToInt32(Console.ReadLine());
+int num4 = Convert.ToInt32(Console.ReadLine());
 int max1 = 0;
 int max2 = 0;
 
-while (num3 != 0)
+while (num4 != 0)
 {
-// программный код
-num3 = Convert.ToInt32(Console.ReadLine());
+    if (num4> max1){
+        max2 = max1;
+        max1 = num4;
+    }
+    else if(num4>max2){
+        max2 = num4;
+    }
+    num4 = Convert.ToInt32(Console.ReadLine());
 }
+Console.WriteLine(max2);
 
 Console.ReadLine();
